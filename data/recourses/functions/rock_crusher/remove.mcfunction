@@ -1,4 +1,4 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",count:1,components:{display:{Name:'{"text":"Rock Crusher","italic":false}'},CustomModelData:5987432,Entitytags:{Item:{id:"minecraft:item_frame",count:1,components:{CustomModelData:5987432}},Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b,Tags:["rock_crusher"]}}}}
+summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",count:1,components:{"minecraft:custom_model_data":5987432,"minecraft:custom_name":'{"italic":false,"text":"Rock Crusher"}',"minecraft:entity_data":{Fixed:1b,Invisible:1b,Invulnerable:1b,Item:{components:{"minecraft:custom_model_data":5987432},count:1,id:"minecraft:item_frame"},Silent:1b,Tags:["rock_crusher"],id:"minecraft:item_frame"}}}}
 kill @e[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..2,sort=nearest,limit=1]
 kill @e[type=item,distance=..2,nbt={Item:{id:"minecraft:white_stained_glass_pane"}}]
 kill @e[type=item,distance=..2,nbt={Item:{id:"minecraft:magenta_glazed_terracotta"}}]
@@ -7,91 +7,10 @@ kill @e[type=falling_block,distance=..1.01,tag=!hopperplaceholder]
 execute if block ~ ~-1 ~ gray_stained_glass run data merge entity @e[type=falling_block,distance=..1.6,sort=nearest,limit=1,tag=hopperplaceholder] {NoGravity:0b}
 execute if block ~ ~-1 ~ gray_stained_glass run setblock ~ ~-1 ~ air
 
-# block displays
-##use UUID, also fixes the bug that removed block displays from other rock crushers when this function is triggered for up or down placement
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~0.96875 ~-0.5 ~-0.5 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-1.03125 ~-0.5 ~-0.5625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-1.03125 ~-0.5 ~0.5 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-1.0313 ~-0.5001 ~-0.5001 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2813 ~-0.5001 ~-0.5001 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~-0.501 ~-0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~0.376 ~-0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~-0.0625 ~-0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~-0.501 ~0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~0.376 ~0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~-0.0625 ~0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~-0.501 ~-0.0625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.2812 ~0.376 ~-0.0625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.5 ~-0.5 ~0.96875 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.5625 ~-0.5 ~-1.03125 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~0.5 ~-0.5 ~-1.03125 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.5001 ~-0.5001 ~-1.0313 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.5001 ~-0.5001 ~-0.2813 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.501 ~-0.501 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.501 ~0.376 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.501 ~-0.0625 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~0.376 ~-0.501 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~0.376 ~0.376 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~0.376 ~-0.0625 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.0625 ~-0.501 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute unless entity @s[nbt={Rotation:[90.0f]}] unless entity @s[nbt={Rotation:[180.0f]}] unless entity @s[nbt={Rotation:[270.0f]}] positioned ~-0.0625 ~0.376 ~-0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~-0.96875 ~-0.5 ~0.5 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~1.03125 ~-0.5 ~0.5625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~1.03125 ~-0.5 ~-0.5 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~1.0313 ~-0.5001 ~0.5001 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2813 ~-0.5001 ~0.5001 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~-0.501 ~0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~0.376 ~0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~-0.0625 ~0.501 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~-0.501 ~-0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~0.376 ~-0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~-0.0625 ~-0.376 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~-0.501 ~0.0625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[90.0f]}] positioned ~0.2812 ~0.376 ~0.0625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.5 ~-0.5 ~-0.96875 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.5625 ~-0.5 ~1.03125 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~-0.5 ~-0.5 ~1.03125 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.5001 ~-0.5001 ~1.0313 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.5001 ~-0.5001 ~0.2813 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.501 ~-0.501 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.501 ~0.376 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.501 ~-0.0625 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~-0.376 ~-0.501 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~-0.376 ~0.376 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~-0.376 ~-0.0625 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.0625 ~-0.501 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-execute if entity @s[nbt={Rotation:[180.0f]}] positioned ~0.0625 ~0.376 ~0.2812 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
-
-
-
-
-
-
+# remove the block displays that have the UUID of this specific rock crusher stored in its Tags
+data modify storage recourses:block_displays compare_rock_crusher_UUID.0 set from entity @s UUID[0]
+data modify storage recourses:block_displays compare_rock_crusher_UUID.1 set from entity @s UUID[1]
+data modify storage recourses:block_displays compare_rock_crusher_UUID.2 set from entity @s UUID[2]
+data modify storage recourses:block_displays compare_rock_crusher_UUID.3 set from entity @s UUID[3]
+function recourses:rock_crusher/remove_marked_bds with storage recourses:block_displays compare_rock_crusher_UUID
 kill @s

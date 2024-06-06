@@ -85,3 +85,9 @@ execute if entity @s[nbt={Rotation:[180.0f]}] run summon block_display ~0.0625 ~
 execute if entity @s[nbt={Rotation:[180.0f]}] run summon block_display ~0.0625 ~0.376 ~0.2812 {Tags:["rock_crusher_texture"],transformation:{left_rotation:[0f,1f,0f,0f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.126f,0.126f,0.25f]},block_state:{Name:"minecraft:light_gray_stained_glass"}}
 
 
+# mark block displays with it's rock crusher UUID
+data modify storage recourses:block_displays rock_crusher_UUID.0 set from entity @s UUID[0]
+data modify storage recourses:block_displays rock_crusher_UUID.1 set from entity @s UUID[1]
+data modify storage recourses:block_displays rock_crusher_UUID.2 set from entity @s UUID[2]
+data modify storage recourses:block_displays rock_crusher_UUID.3 set from entity @s UUID[3]
+function recourses:rock_crusher/place_mark_bds with storage recourses:block_displays rock_crusher_UUID
