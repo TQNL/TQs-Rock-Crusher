@@ -1,5 +1,5 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",Count:1b,tag:{display:{Name:'{"text":"Rock Crusher","italic":false}'},CustomModelData:5987432,EntityTag:{Item:{id:"minecraft:item_frame",Count:1b,tag:{CustomModelData:5987432}},Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b,Tags:["rock_crusher"]}}}}
-kill @e[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=0..2,sort=nearest,limit=1]
+summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",count:1,components:{display:{Name:'{"text":"Rock Crusher","italic":false}'},CustomModelData:5987432,Entitytags:{Item:{id:"minecraft:item_frame",count:1,components:{CustomModelData:5987432}},Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b,Tags:["rock_crusher"]}}}}
+kill @e[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..2,sort=nearest,limit=1]
 kill @e[type=item,distance=..2,nbt={Item:{id:"minecraft:white_stained_glass_pane"}}]
 kill @e[type=item,distance=..2,nbt={Item:{id:"minecraft:magenta_glazed_terracotta"}}]
 kill @e[type=item,distance=..2,nbt={Item:{id:"minecraft:light_gray_stained_glass_pane"}}]

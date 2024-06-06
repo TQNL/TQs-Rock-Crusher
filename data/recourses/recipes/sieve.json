@@ -1,5 +1,5 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "#@#",
     "@#@",
@@ -14,6 +14,13 @@
     }
   },
   "result": {
-    "item": "minecraft:knowledge_book"
+    "id": "minecraft:iron_trapdoor",
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Sieve\",\"italic\":false}",
+      "minecraft:custom_model_data": 5887431,
+      "minecraft:custom_data": {
+        "sieve": 1
+      }
+    }
   }
 }
