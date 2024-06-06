@@ -8,6 +8,7 @@ execute if block ~ ~-1 ~ gray_stained_glass run data merge entity @e[type=fallin
 execute if block ~ ~-1 ~ gray_stained_glass run setblock ~ ~-1 ~ air
 
 # block displays
+##use UUID, also fixes the bug that removed block displays from other rock crushers when this function is triggered for up or down placement
 execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~0.96875 ~-0.5 ~-0.5 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]
 
 execute if entity @s[nbt={Rotation:[270.0f]}] positioned ~-1.03125 ~-0.5 ~-0.5625 run kill @e[tag=rock_crusher_texture,sort=nearest,limit=1]

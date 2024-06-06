@@ -12,10 +12,10 @@ execute as @e[tag=crafter598732431] at @s unless block ~ ~ ~ dropper run functio
 #rock crusher
 ##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:0b}] at @s run function recourses:rock_crusher/remove
 ##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:1b}] at @s run function recourses:rock_crusher/remove
-##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:2b}] at @s run function recourses:rock_crusher/place
-##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:3b}] at @s run function recourses:rock_crusher/place
-##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:4b}] at @s run function recourses:rock_crusher/place
-##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:5b}] at @s run function recourses:rock_crusher/place
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:2b}] at @s run function recourses:rock_crusher/place with entity @s
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:3b}] at @s run function recourses:rock_crusher/place with entity @s
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:4b}] at @s run function recourses:rock_crusher/place with entity @s
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:5b}] at @s run function recourses:rock_crusher/place with entity @s
 ##execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s unless block ~ ~ ~ barrel run function recourses:rock_crusher/remove
 ##clear @a white_stained_glass_pane{display:{Name:'{"text":" "}'},CustomModelData:5887433}
 ##clear @a magenta_glazed_terracotta{display:{Name:'{"text":" "}'},CustomModelData:5887434}
