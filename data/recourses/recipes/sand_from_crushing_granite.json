@@ -6,10 +6,7 @@
     "item": "minecraft:granite"
   },
   "result": {
-    "id": "minecraft:sand",
-    "components": {
-      "minecraft:custom_data": {}
-    }
+    "id": "minecraft:sand"
   },
   "cookingtime": 36
 }

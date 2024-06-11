@@ -28,7 +28,8 @@
       "minecraft:custom_name": "{\"text\":\"Redstone Clock\",\"italic\":false}",
       "minecraft:custom_model_data": 5887430,
       "minecraft:custom_data": {
-        "redstone_clock": 1
+        "redstone_clock": 1,
+        "rc_no_placing": 1
       }
     }
   }

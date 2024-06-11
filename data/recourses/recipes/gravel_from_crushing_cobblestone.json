@@ -6,10 +6,7 @@
     "item": "minecraft:cobblestone"
   },
   "result": {
-    "id": "minecraft:gravel",
-    "components": {
-      "minecraft:custom_data": {}
-    }
+    "id": "minecraft:gravel"
   },
   "cookingtime": 1200
 }

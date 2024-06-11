@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:blast_furnace"
+                ],
+                "nbt": "{CustomName:'\"Rock Crusher\"'}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "recourses:blast_furnace/place_fake_rock_crusher/locate1"
+  }
+}

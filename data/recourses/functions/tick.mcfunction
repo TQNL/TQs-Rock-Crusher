@@ -1,9 +1,19 @@
 # make iron piston not placable (adv or maybe eating?)
 #quick sand no placie
+# make old versions convert to blast furnace on load
 
-# prevent hoppering into blast furni, with custom data in output slot, but make them stackable
-## summon marker at a non-rock_crusher blast furnace when looking at one, loop the prevention (takes priotity over recipe)
+# dumb attempt at discouraging iron_piston placement and dis
+execute as @a[tag=!no_placie,gamemode=survival] if data entity @s SelectedItem.components."minecraft:custom_data".rc_no_placing run tag @s add no_placie
+execute as @a[tag=!no_placie,gamemode=survival] if data entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".rc_no_placing run tag @s add no_placie
+gamemode adventure @a[tag=no_placie]
+execute as @a[tag=no_placie,gamemode=adventure] unless data entity @s SelectedItem.components."minecraft:custom_data".rc_no_placing unless data entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".rc_no_placing run tag @s remove no_placie
+gamemode survival @a[tag=!no_placie,gamemode=adventure]
 
+# patched exploits:
+## rename blast furnace to Rock Crusher/Rock Crusher - Crushing
+## when a player want to circumvent the marking of a blast furnace (when clicking it), they will have to place a hopper above. that is also detected
+execute as @e[type=marker,tag=normal_blast_furnace] at @s unless block ~ ~ ~ blast_furnace run kill @s
+execute as @e[type=marker,tag=normal_blast_furnace] at @s unless block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher - Crushing"'} unless block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher"'} if items block ~ ~ ~ container.0 #minecraft:rock_crusher_material run function recourses:blast_furnace/no_blasting
 
 # get manual
 scoreboard players enable @a get_rock_crusher_manual
@@ -15,8 +25,7 @@ execute as @e[tag=crafter598732431] at @s if block ~ ~ ~ dropper{CustomName:'"Fa
 execute as @e[tag=crafter598732431] at @s unless block ~ ~ ~ dropper run function recourses:fabricator/remove
 
 # prevent using rock crusher recipes in normal blast furnace: shift=in advancement; cursor only works in survival; tag is removed in advancement
-execute as @a[tag=not_rock_crusher] at @s if items entity @s player.cursor #rock_crusher_material unless function recourses:blast_furnace/not_rock_crusher/cursor run function recourses:blast_furnace/not_rock_crusher/cursor2
-execute as @a[tag=not_rock_crusher] if items entity @s player.cursor #rock_crusher_material run item replace entity @s player.cursor with air
+execute as @a[tag=not_rock_crusher] at @s if items entity @s player.cursor #rock_crusher_material anchored eyes positioned ^ ^ ^ anchored feet run function recourses:blast_furnace/not_rock_crusher/reset_cursor_raycast
 
 # rock crusher
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:0b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/nope

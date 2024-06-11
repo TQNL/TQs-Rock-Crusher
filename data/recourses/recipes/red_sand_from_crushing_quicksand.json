@@ -6,10 +6,7 @@
     "item": "minecraft:powder_snow_bucket"
   },
   "result": {
-    "id": "minecraft:red_sand",
-    "components": {
-      "minecraft:custom_data": {}
-    }
+    "id": "minecraft:red_sand"
   },
   "cookingtime": 3600
 }

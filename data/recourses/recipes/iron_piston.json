@@ -20,7 +20,12 @@
     "id": "minecraft:piston",
     "components": {
       "minecraft:custom_name": "{\"text\":\"Iron Piston\",\"italic\":false}",
-      "minecraft:custom_model_data": 5987431
+      "minecraft:custom_model_data": 5987431,
+      "minecraft:custom_data": {
+        "iron_piston": 1,
+        "rc_no_placing": 1
+      }
+
     }
   }
 }
