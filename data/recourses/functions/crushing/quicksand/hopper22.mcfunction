@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ hopper{CustomName:'{"text":"Rock Crusher Hopper"}'} run item replace block ~ ~-1 ~ container.0 with bucket
-execute if block ~ ~-1 ~ hopper{CustomName:'{"text":"Rock Crusher Hopper"}'} run data merge block ~ ~-1 ~ {TransferCooldown:1}

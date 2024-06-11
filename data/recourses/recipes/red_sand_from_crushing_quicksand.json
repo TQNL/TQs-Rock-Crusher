@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "group": "rock_crusher",
+  "ingredient": {
+    "item": "minecraft:powder_snow_bucket"
+  },
+  "result": {
+    "id": "minecraft:red_sand",
+    "components": {
+      "minecraft:custom_data": {}
+    }
+  },
+  "cookingtime": 3600
+}

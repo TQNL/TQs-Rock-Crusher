@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "group": "rock_crusher",
+  "ingredient": {
+    "item": "minecraft:granite"
+  },
+  "result": {
+    "id": "minecraft:sand",
+    "components": {
+      "minecraft:custom_data": {}
+    }
+  },
+  "cookingtime": 36
+}

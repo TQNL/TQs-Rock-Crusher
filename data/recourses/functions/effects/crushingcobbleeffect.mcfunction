@@ -1,3 +1,0 @@
-schedule function recourses:effects/crushingcobbleeffect 1s replace
-execute at @a as @e[type=minecraft:item_frame,tag=rock_crusher,distance=..20] run execute at @s if block ~ ~ ~ barrel{Items:[{Slot:12b,id:"minecraft:cobblestone"}]} run execute at @s run playsound minecraft:block.ancient_debris.break block @a[distance=..20]
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel{Items:[{Slot:12b,id:"minecraft:cobblestone"}]} run particle minecraft:block cobblestone ~ ~0.5 ~ 0.5 0.5 0.5 1 40 normal

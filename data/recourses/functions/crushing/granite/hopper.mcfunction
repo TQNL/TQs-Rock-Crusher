@@ -1,3 +1,0 @@
-execute if block ~ ~-1 ~ hopper{CustomName:'{"text":"Rock Crusher Hopper"}'} run item replace block ~ ~ ~ container.14 with light_gray_stained_glass_pane{display:{Name:'{"text":"output"}'}}
-execute if block ~ ~-1 ~ hopper{CustomName:'{"text":"Rock Crusher Hopper"}'} run item replace block ~ ~-1 ~ container.0 with sand
-execute if block ~ ~-1 ~ hopper{CustomName:'{"text":"Rock Crusher Hopper"}'} run data merge block ~ ~-1 ~ {TransferCooldown:1}

@@ -1,5 +1,0 @@
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~-1 ~ hopper[facing=down]{CustomName:'{"text":"Rock Crusher Hopper"}'} run function recourses:hopper/hopperplaceholderdown
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~-1 ~ hopper[facing=east]{CustomName:'{"text":"Rock Crusher Hopper"}'} run function recourses:hopper/hopperplaceholdereast
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~-1 ~ hopper[facing=north]{CustomName:'{"text":"Rock Crusher Hopper"}'} run function recourses:hopper/hopperplaceholdernorth
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~-1 ~ hopper[facing=south]{CustomName:'{"text":"Rock Crusher Hopper"}'} run function recourses:hopper/hopperplaceholdersouth
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~-1 ~ hopper[facing=west]{CustomName:'{"text":"Rock Crusher Hopper"}'} run function recourses:hopper/hopperplaceholderwest

@@ -1,7 +1,0 @@
-{
-    "function": "minecraft:limit_count",
-    "limit": {
-        "min": 1,
-        "max": 1
-    }
-  }
