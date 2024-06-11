@@ -1,7 +1,7 @@
 # TQs-Rock-Crusher
 This datapack makes gravel, sand and red sand renewable with a Rock Crusher.
 
-Video: https://youtu.be/vQ-M8GcCI5I
+Video (visually a bit outdated): https://youtu.be/vQ-M8GcCI5I
 
 Make sure to get the resource pack located in the file if below 1.19.4.
 

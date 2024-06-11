@@ -1,6 +1,6 @@
-# make iron piston not placable (adv or maybe eating?)
-#quick sand no placie
-# make old versions convert to blast furnace on load
+# convert old rock crushers with barrels to new ones
+execute as @e[type=item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel run tag @s remove placed
+execute as @e[type=item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel run data remove block ~ ~ ~ Items
 
 # dumb attempt at discouraging iron_piston placement and dis
 execute as @a[tag=!no_placie,gamemode=survival] if data entity @s SelectedItem.components."minecraft:custom_data".rc_no_placing run tag @s add no_placie
@@ -30,11 +30,8 @@ execute as @a[tag=not_rock_crusher] at @s if items entity @s player.cursor #rock
 # rock crusher
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:0b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/nope
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:1b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/nope
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:2b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:3b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:4b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:5b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s unless block ~ ~ ~ blast_furnace run function recourses:rock_crusher/remove
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt=!{Facing:0b},nbt=!{Facing:1b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s unless block ~ ~ ~ blast_furnace unless block ~ ~ ~ barrel run function recourses:rock_crusher/remove
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s if block ~ ~ ~ blast_furnace{BurnTime:0s} run data merge block ~ ~ ~ {BurnTime:32767s}
 
 # rock crushing
