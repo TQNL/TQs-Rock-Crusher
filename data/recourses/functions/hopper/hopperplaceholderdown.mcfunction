@@ -1,0 +1,2 @@
+setblock ~ ~-1 ~ gray_stained_glass
+execute align xyz run summon falling_block ~0.5 ~-1 ~0.5 {BlockState:{Name:"minecraft:hopper",Properties:{facing:"down"}},TileEntityData:{CustomName:'{"text":"Rock Crusher Hopper"}'},NoGravity:1b,Silent:1b,Time:-9999,Tags:["hopperplaceholder"]}
