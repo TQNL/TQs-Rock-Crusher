@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "OXO",
+    " @ ",
+    " + "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:ink_sac"
+    },
+    "O": {
+      "item": "minecraft:glass"
+    },
+    "@": {
+      "item": "minecraft:feather"
+    },
+    "+": {
+      "item": "minecraft:enchanting_table"
+    }
+  },
+  "result": {
+    "item": "minecraft:knowledge_book"
+  }
+}

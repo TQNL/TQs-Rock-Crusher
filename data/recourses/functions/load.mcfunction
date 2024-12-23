@@ -1,0 +1,2 @@
+tellraw @a {"text": "Loaded Thijquints Recourses datapack","color": "#00FF00"}
+tellraw @a {"text":"Hover for for owner's manual recipe","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Glass - . _Ink Sac_ . - Glass\n---- - . _Feather_ . - -----\n---- -Enchant Table- -----\"}"}]}}

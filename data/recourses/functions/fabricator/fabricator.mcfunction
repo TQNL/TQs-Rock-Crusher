@@ -1,0 +1,3 @@
+execute align xyz run summon armor_stand ~0.5 ~-1 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["crafter598732431"],ArmorItems:[{},{},{},{id:"minecraft:item_frame",Count:1b,tag:{Tags:["Fabricator"],display:{Name:'{"text":"Fabricator"}'},CustomModelData:5987430}}],CustomName:'{"text":"FabricatorPos"}'}
+setblock ~ ~-1 ~ dropper{CustomName:'{"text":"Fabricator"}'}
+kill @s

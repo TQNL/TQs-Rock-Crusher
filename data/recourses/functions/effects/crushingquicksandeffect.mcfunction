@@ -1,0 +1,4 @@
+schedule function recourses:effects/crushingquicksandeffect 1s replace
+execute at @a as @e[type=minecraft:item_frame,tag=rock_crusher,distance=..20] run execute at @s if block ~ ~ ~ barrel{Items:[{Slot:12b,id:"minecraft:flower_banner_pattern",tag:{CustomModelData:5887432}}]} run execute at @s run playsound minecraft:block.sand.break block @a[distance=..20]
+execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel{Items:[{Slot:12b,id:"minecraft:flower_banner_pattern",tag:{CustomModelData:5887432}}]} run particle minecraft:block red_sand ~ ~0.5 ~ 0.5 0.5 0.5 1 30 normal
+execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel{Items:[{Slot:12b,id:"minecraft:flower_banner_pattern",tag:{CustomModelData:5887432}}]} run particle lava ~ ~0.5 ~ 0.5 0.5 0.5 1 1 normal

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/popped_chorus_fruit"
+  },
+  "overrides": [
+    {"predicate": {"custom_model_data":5887431}, "model": "item/sieve"}
+  ]
+}
