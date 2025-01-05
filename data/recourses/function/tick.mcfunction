@@ -28,9 +28,9 @@ execute as @e[tag=crafter598732431] at @s unless block ~ ~ ~ dropper run functio
 execute as @a[tag=not_rock_crusher] at @s if items entity @s player.cursor #rock_crusher_material anchored eyes positioned ^ ^ ^ anchored feet run function recourses:blast_furnace/not_rock_crusher/reset_cursor_raycast
 
 # rock crusher
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:0b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/nope
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:1b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/nope
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt=!{Facing:0b},nbt=!{Facing:1b},sort=nearest,limit=1] at @s run function recourses:rock_crusher/place
+execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:0b}] at @s run function recourses:rock_crusher/nope
+execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:1b}] at @s run function recourses:rock_crusher/nope
+execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt=!{Facing:0b},nbt=!{Facing:1b}] at @s run function recourses:rock_crusher/place
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s unless block ~ ~ ~ blast_furnace unless block ~ ~ ~ barrel run function recourses:rock_crusher/remove
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s if block ~ ~ ~ blast_furnace{BurnTime:0s} run data merge block ~ ~ ~ {BurnTime:32767s}
 
