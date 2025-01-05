@@ -13,13 +13,15 @@
     "%": "minecraft:stone"
   },
   "result": {
-    "id": "minecraft:repeater",
+    "id": "minecraft:music_disc_13",
     "components": {
       "minecraft:custom_name": "{\"text\":\"Redstone Clock\",\"italic\":false}",
       "minecraft:custom_data": {
-        "redstone_clock": true,
-        "rc_no_placing": true
-      }
+        "redstone_clock": true
+      },
+      "minecraft:item_model": "minecraft:repeater",
+      "!minecraft:jukebox_playable": {},
+      "minecraft:rarity": "common"
     }
   }
 }
