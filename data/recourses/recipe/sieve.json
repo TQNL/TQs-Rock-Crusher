@@ -14,7 +14,7 @@
     "components": {
       "minecraft:custom_name": "{\"text\":\"Sieve\",\"italic\":false}",
       "minecraft:custom_data": {
-        "sieve": 1,
+        "sieve": true,
         "rc_no_placing": 1
       }
     }
