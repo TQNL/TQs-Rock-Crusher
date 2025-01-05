@@ -6,21 +6,11 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "@": {
-      "item": "minecraft:redstone"
-    },
-    "!": {
-      "item": "minecraft:repeater"
-    },
-    "$": {
-      "item": "minecraft:redstone_torch"
-    },
-    "%": {
-      "item": "minecraft:stone"
-    }
+    "#": "minecraft:iron_ingot",
+    "@": "minecraft:redstone",
+    "!": "minecraft:repeater",
+    "$": "minecraft:redstone_torch",
+    "%": "minecraft:stone"
   },
   "result": {
     "id": "minecraft:repeater",

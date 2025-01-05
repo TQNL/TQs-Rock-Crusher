@@ -2,9 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "group": "rock_crusher",
-  "ingredient": {
-    "item": "minecraft:granite"
-  },
+  "ingredient": "minecraft:granite",
   "result": {
     "id": "minecraft:sand"
   },
