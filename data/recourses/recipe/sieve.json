@@ -17,10 +17,9 @@
     "id": "minecraft:iron_trapdoor",
     "components": {
       "minecraft:custom_name": "{\"text\":\"Sieve\",\"italic\":false}",
-      "minecraft:custom_model_data": 5887431,
       "minecraft:custom_data": {
-        "sieve": 1,
-        "rc_no_placing": 1
+        "sieve": true,
+        "rc_no_placing": true
       }
     }
   }
