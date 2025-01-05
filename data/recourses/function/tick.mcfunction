@@ -32,8 +32,8 @@ execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing
 execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt={Facing:1b}] at @s run function recourses:rock_crusher/nope
 execute as @n[type=minecraft:item_frame,tag=rock_crusher,tag=!placed,nbt=!{Facing:0b},nbt=!{Facing:1b}] at @s run function recourses:rock_crusher/place
 execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s unless block ~ ~ ~ blast_furnace unless block ~ ~ ~ barrel run function recourses:rock_crusher/remove
-execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s if block ~ ~ ~ blast_furnace{BurnTime:0s} run data merge block ~ ~ ~ {BurnTime:32767s}
+execute as @e[type=minecraft:item_frame,tag=rock_crusher,tag=placed] at @s if block ~ ~ ~ blast_furnace{lit_time_remaining:0s} run data merge block ~ ~ ~ {lit_time_remaining:32767s}
 
 # rock crushing
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s unless block ~ ~ ~ blast_furnace{CookTime:0s} if items block ~ ~ ~ container.0 #recourses:rock_crusher_material if block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher"'} run function recourses:crushing/crushing
-execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~ ~ blast_furnace{CookTime:0s} if block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher - Crushing"'} run data merge block ~ ~ ~ {CustomName:'"Rock Crusher"'}
+execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s unless block ~ ~ ~ blast_furnace{cooking_time_spent:0s} if items block ~ ~ ~ container.0 #recourses:rock_crusher_material if block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher"'} run function recourses:crushing/crushing
+execute as @e[type=minecraft:item_frame,tag=rock_crusher] at @s if block ~ ~ ~ blast_furnace{cooking_time_spent:0s} if block ~ ~ ~ blast_furnace{CustomName:'"Rock Crusher - Crushing"'} run data merge block ~ ~ ~ {CustomName:'"Rock Crusher"'}
