@@ -29,11 +29,10 @@
       "minecraft:lore": [
         "{\"text\":\"ferric quicksand\"}"
       ],
-      "minecraft:custom_model_data": 5887432,
       "minecraft:hide_additional_tooltip": {},
       "minecraft:custom_data": {
-        "quicksandbucket": 1,
-        "rc_no_placing": 1
+        "quicksandbucket": true,
+        "rc_no_placing": true
       }
     }
   }
