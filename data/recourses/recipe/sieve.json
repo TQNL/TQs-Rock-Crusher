@@ -15,7 +15,7 @@
       "minecraft:custom_name": "{\"text\":\"Sieve\",\"italic\":false}",
       "minecraft:custom_data": {
         "sieve": true,
-        "rc_no_placing": 1
+        "rc_no_placing": true
       }
     }
   }

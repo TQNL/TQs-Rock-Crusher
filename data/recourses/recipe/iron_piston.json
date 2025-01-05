@@ -16,7 +16,7 @@
       "minecraft:custom_name": "{\"text\":\"Iron Piston\",\"italic\":false}",
       "minecraft:custom_data": {
         "iron_piston": true,
-        "rc_no_placing": 1
+        "rc_no_placing": true
       }
     }
   }

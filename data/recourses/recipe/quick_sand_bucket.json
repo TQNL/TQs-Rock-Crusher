@@ -22,7 +22,7 @@
       "minecraft:hide_additional_tooltip": {},
       "minecraft:custom_data": {
         "quicksandbucket": true,
-        "rc_no_placing": 1
+        "rc_no_placing": true
       }
     }
   }
