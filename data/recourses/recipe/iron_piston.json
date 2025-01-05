@@ -11,13 +11,15 @@
     "$": "minecraft:redstone"
   },
   "result": {
-    "id": "minecraft:piston",
+    "id": "minecraft:music_disc_11",
     "components": {
       "minecraft:custom_name": "{\"text\":\"Iron Piston\",\"italic\":false}",
       "minecraft:custom_data": {
-        "iron_piston": true,
-        "rc_no_placing": true
-      }
+        "iron_piston": true
+      },
+      "minecraft:item_model": "minecraft:piston",
+      "!minecraft:jukebox_playable": {},
+      "minecraft:rarity": "common"
     }
   }
 }

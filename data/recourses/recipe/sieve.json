@@ -10,13 +10,15 @@
     "@": "minecraft:iron_nugget"
   },
   "result": {
-    "id": "minecraft:iron_trapdoor",
+    "id": "minecraft:music_disc_5",
     "components": {
       "minecraft:custom_name": "{\"text\":\"Sieve\",\"italic\":false}",
       "minecraft:custom_data": {
-        "sieve": true,
-        "rc_no_placing": true
-      }
+        "sieve": true
+      },
+      "minecraft:item_model": "minecraft:iron_trapdoor",
+      "!minecraft:jukebox_playable": {},
+      "minecraft:rarity": "common"
     }
   }
 }
