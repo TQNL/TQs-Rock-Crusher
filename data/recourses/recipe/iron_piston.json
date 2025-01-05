@@ -6,15 +6,9 @@
     "@$@"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "@": {
-      "item": "minecraft:iron_block"
-    },
-    "$": {
-      "item": "minecraft:redstone"
-    }
+    "#": "minecraft:iron_ingot",
+    "@": "minecraft:iron_block",
+    "$": "minecraft:redstone"
   },
   "result": {
     "id": "minecraft:piston",
@@ -25,7 +19,6 @@
         "iron_piston": 1,
         "rc_no_placing": 1
       }
-
     }
   }
 }
