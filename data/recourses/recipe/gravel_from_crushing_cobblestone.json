@@ -2,9 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "group": "rock_crusher",
-  "ingredient": {
-    "item": "minecraft:cobblestone"
-  },
+  "ingredient": "minecraft:cobblestone",
   "result": {
     "id": "minecraft:gravel"
   },
