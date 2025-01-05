@@ -2,9 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "group": "rock_crusher",
-  "ingredient": {
-    "item": "minecraft:cobbled_deepslate"
-  },
+  "ingredient": "minecraft:cobbled_deepslate",
   "result": {
     "id": "minecraft:gravel"
   },
