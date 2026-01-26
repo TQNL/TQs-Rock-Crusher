@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "nbt": "{Tags:[\"not_rock_crusher\"]}"
+              "nbt": {"Tags":["not_rock_crusher"]}
             }
           }
         ]
