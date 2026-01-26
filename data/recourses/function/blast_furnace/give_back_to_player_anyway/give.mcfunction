@@ -2,5 +2,5 @@
 item replace entity @p player.cursor from block ~ ~ ~ container.0
 item replace block ~ ~ ~ container.0 with air
 execute as @p run function recourses:blast_furnace/not_rock_crusher/reset_cursor_pre
-data merge block ~ ~ ~ {CustomName:'"Rock Crusher"'}
+data merge block ~ ~ ~ {CustomName:"Rock Crusher"}
 return 1
