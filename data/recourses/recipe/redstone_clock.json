@@ -21,7 +21,8 @@
       },
       "minecraft:item_model": "minecraft:repeater",
       "!minecraft:jukebox_playable": {},
-      "minecraft:rarity": "common"
+      "minecraft:rarity": "common",
+      "max_stack_size": 64
     }
   }
 }
