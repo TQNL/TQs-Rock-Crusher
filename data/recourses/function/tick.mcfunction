@@ -8,14 +8,9 @@ execute as @e[type=item_frame,tag=rock_crusher] at @s if block ~ ~ ~ barrel run 
 execute as @e[type=marker,tag=normal_blast_furnace] at @s unless block ~ ~ ~ blast_furnace run kill @s
 execute as @e[type=marker,tag=normal_blast_furnace] at @s unless block ~ ~ ~ blast_furnace{CustomName:"Rock Crusher - Crushing"} unless block ~ ~ ~ blast_furnace{CustomName:"Rock Crusher"} if items block ~ ~ ~ container.0 #recourses:rock_crusher_material run function recourses:blast_furnace/no_blasting
 
-# get manual
+# tutorial
 scoreboard players enable @a get_rock_crusher_manual
-execute as @a[scores={get_rock_crusher_manual=1..}] run function recourses:items/giveguidebook
-
-# fabricator
-execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",components:{"minecraft:written_book_content":{author:"ThijquintNL",title:{raw:"Recourse Manual"}}}}}] at @s if block ~ ~-0.1 ~ crafting_table run function recourses:fabricator/fabricator
-execute as @e[tag=crafter598732431] at @s if block ~ ~ ~ dropper{CustomName:"Fabricator",Items:[{Slot:0b,components:{"minecraft:custom_data":{redstone_clock:1b},"minecraft:custom_name":{"italic":false,"text":"Redstone Clock"}},count:1,id:"minecraft:music_disc_13"},{Slot:1b,components:{"minecraft:custom_data":{iron_piston:1b},"minecraft:custom_name":{"italic":false,"text":"Iron Piston"}},count:1,id:"minecraft:music_disc_11"},{Slot:2b,count:1,id:"minecraft:lever"},{Slot:3b,count:1,id:"minecraft:iron_block"},{Slot:4b,components:{"minecraft:custom_data":{sieve:1b},"minecraft:custom_name":{"italic":false,"text":"Sieve"}},count:1,id:"minecraft:music_disc_5"},{Slot:5b,count:1,id:"minecraft:iron_block"},{Slot:6b,count:1,id:"minecraft:iron_ingot"},{Slot:7b,count:1,id:"minecraft:iron_ingot"},{Slot:8b,count:1,id:"minecraft:iron_ingot"}]} run data merge block ~ ~ ~ {Items:[{Slot:4b,id:"minecraft:item_frame",count:1,components:{"minecraft:custom_data":{rock_crusher_frame:1b},"minecraft:custom_name":{"italic":false,"text":"Rock Crusher"},"minecraft:entity_data":{Fixed:1b,Invisible:1b,Invulnerable:1b,Item:{components:{"minecraft:custom_data":{rock_crusher_frame:1b}},count:1,id:"minecraft:item_frame"},Silent:1b,Tags:["rock_crusher"],id:"minecraft:item_frame"}}}]}
-execute as @e[tag=crafter598732431] at @s unless block ~ ~ ~ dropper run function recourses:fabricator/remove
+execute as @a[scores={get_rock_crusher_manual=1..}] run function recourses:tutorial
 
 # prevent using rock crusher recipes in normal blast furnace: shift=in advancement; cursor only works in survival; tag is removed in advancement
 execute as @a[tag=not_rock_crusher] at @s if items entity @s player.cursor #recourses:rock_crusher_material anchored eyes positioned ^ ^ ^ anchored feet run function recourses:blast_furnace/not_rock_crusher/reset_cursor_raycast

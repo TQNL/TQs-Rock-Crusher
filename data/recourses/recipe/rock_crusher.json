@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "{|}",
+    "@#@",
+    "$$$"
+  ],
+  "key": {
+    "#": "minecraft:command_block",
+    "$": "minecraft:iron_ingot",
+    "@": "minecraft:iron_block",
+    "{": "minecraft:repeating_command_block",
+    "|": "minecraft:chain_command_block",
+    "}": "minecraft:lever"
+  },
+  "result": {
+    "id": "minecraft:item_frame",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Rock Crusher",
+        "italic": false
+      },
+      "minecraft:custom_data": {
+              "rock_crusher_frame": true
+            },
+      "minecraft:entity_data": {
+        "id": "minecraft:item_frame",
+        "Invisible": true,
+        "Invulnerable": true,
+        "Silent": true,
+        "Tags": [
+          "rock_crusher"
+        ],
+        "Item": {
+          "id": "minecraft:item_frame",
+          "components": {
+            "minecraft:custom_data": {
+              "rock_crusher_frame": true
+            }
+          },
+          "count": 1
+        },
+        "Fixed": true
+      }
+    },
+    "count": 1
+  }
+}

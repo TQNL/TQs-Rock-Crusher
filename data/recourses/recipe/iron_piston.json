@@ -11,16 +11,14 @@
     "$": "minecraft:redstone"
   },
   "result": {
-    "id": "minecraft:music_disc_11",
+    "id": "minecraft:chain_command_block",
     "components": {
       "minecraft:custom_name": {"text":"Iron Piston","italic":false},
       "minecraft:custom_data": {
         "iron_piston": true
       },
       "minecraft:item_model": "minecraft:piston",
-      "!minecraft:jukebox_playable": {},
-      "minecraft:rarity": "common",
-      "max_stack_size": 64
+      "minecraft:rarity": "common"
     }
   }
 }
